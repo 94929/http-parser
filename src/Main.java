@@ -4,6 +4,8 @@
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        HeaderParser HP = new HeaderParser();
+        HP.readHeader("multipart.txt");
+        HP.writeHeader("parsed_multipart.txt");
     }
 }
