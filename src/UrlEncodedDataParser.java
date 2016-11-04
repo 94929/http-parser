@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.Map;
 import java.util.StringTokenizer;
 
 /**
@@ -43,26 +42,6 @@ public class UrlEncodedDataParser extends DataParser {
             }
         } catch (IOException e) {
             e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void writeData(String fileName) {
-        try {
-            File file = new File(fileName);
-
-            if (!file.exists())
-                file.createNewFile();
-
-            FileWriter fw = new FileWriter(file.getAbsoluteFile());
-            BufferedWriter bw = new BufferedWriter(fw);
-
-            for (Map.Entry<String, String> entry : data.entrySet())
-                bw.write("[" + entry.getKey() + "] : [" + entry.getValue() + "]\n");
-
-            bw.close();
-        } catch (IOException e) {
-            e.getStackTrace();
         }
     }
 }
