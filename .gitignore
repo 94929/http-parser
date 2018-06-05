@@ -1,5 +1,7 @@
 # files
 *.iml
+.DS_Store
 
 # dirs
 out/
+.idea/
